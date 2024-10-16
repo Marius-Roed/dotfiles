@@ -1,0 +1,8 @@
+# File with custom functions
+
+# Open file
+open_in_nvim() {
+  nvim $(find . -type f | fzf)
+  zle reset-prompt
+}
+zle -N fzf_vim open_in_nvim

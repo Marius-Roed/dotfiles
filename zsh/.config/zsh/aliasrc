@@ -1,0 +1,19 @@
+# Aliases I use
+
+# General aliases
+alias cls="clear"
+alias neovim="nvim"
+alias vim="nvim"
+alias vi="nvim"
+alias grep="grep --color=auto"
+alias ls="ls --color=auto"
+alias ll="ls -al"
+alias rm="rm -ri"
+alias zshrc="nvim ~/.config/zsh/.zshrc"
+alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+
+# Git aliases
+alias gpush="git push"
+alias gpull="git pull --prune"
+alias gc="git commit -m"
+alias ga="git add -p"
