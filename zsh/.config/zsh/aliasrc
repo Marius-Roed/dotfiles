@@ -11,6 +11,7 @@ alias ll="ls -al"
 alias rm="rm -ri"
 alias zshrc="nvim ~/.config/zsh/.zshrc"
 alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+alias reload=". ~/.config/zsh/.zshrc"
 
 # Git aliases
 alias gpush="git push"
