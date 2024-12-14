@@ -2,7 +2,12 @@
 
 # Open file
 open_in_nvim() {
-  nvim $(find . -type f | fzf)
+  dir=$(fd --hidden --type d '\.git$' ~/dev | xargs dirname | fzf)
+
+  if [[ -n "$dir" ]]; then
+    nvim "$dir"
+  fi
+
   zle reset-prompt
 }
 zle -N fzf_vim open_in_nvim

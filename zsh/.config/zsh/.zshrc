@@ -14,7 +14,7 @@ fi
 # Custom functions
 [ -f "${ZDOTDIR}/functionsrc" ] && source "${ZDOTDIR}/functionsrc"
 
-bindkey "^o" fzf_vim
+bindkey "^O" fzf_vim
 
 # Plugins 
 source "${ZDOTDIR}/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
