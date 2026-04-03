@@ -1,0 +1,12 @@
+require("items.calendar")
+require("items.wifi")
+require("items.volume")
+require("items.battery")
+-- require("items.cpu")
+require("items.media")
+
+require("items.apple")
+require("items.settings")
+require("items.spaces")
+require("items.menus")
+require("items.front_app")

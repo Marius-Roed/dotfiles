@@ -1,0 +1,34 @@
+# Aliases I use
+
+# General aliases
+alias cls="clear"
+
+if command -v nvim &>/dev/null 2>&1; then
+    alias neovim="nvim"
+    alias vim="nvim"
+    alias vi="nvim"
+fi
+
+alias grep="grep --color=auto"
+alias ls="ls --color=auto"
+alias ll="ls -al"
+alias rm="rm -ri"
+alias zshrc="nvim ~/.config/zsh/.zshrc"
+alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+alias reload="source ~/.config/zsh/.zshrc"
+alias mdir="create_n_go"
+alias ~="~;cls"
+alias pip="pip3"
+alias python="python3"
+
+# Git aliases
+alias gpush="git push"
+alias gpull="git pull --prune"
+alias gc="git commit -m"
+alias ga="git add -p"
+
+# tmux
+if command -v tmux &>/dev/null 2>&1; then
+    alias tl="tmux list-sessions"
+    alias ta="tmux attach -t"
+fi

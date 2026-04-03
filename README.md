@@ -8,6 +8,7 @@ PRs will not be merged, unless it is some seriously dangerous secruity thing, wh
 
 # TODO
 
-- [ ] Set up stow properly
-- [ ] Create installation script
-- [ ] Split Mac and Linux
+- [x] Set up stow properly
+- [x] Create installation script
+- [x] Split Mac and Linux
+- [ ] remove zsh plugins

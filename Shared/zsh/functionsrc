@@ -1,0 +1,48 @@
+# File with custom functions
+
+# Open file
+open_in_nvim() {
+  dir=$(fd --hidden --type d '\.git$' ~/dev | xargs dirname | fzf)
+
+  if [[ -n "$dir" ]]; then
+    nvim "$dir"
+  fi
+
+  zle reset-prompt
+}
+zle -N fzf_vim open_in_nvim
+
+change_to_dir() {
+  dir=$(fd --hidden --type d '\.git$' ~/dev | xargs dirname | fzf)
+
+  if [[ -n "$dir" ]]; then
+    cd "$dir"
+  fi
+
+  zle reset-prompt
+}
+
+zle -N fzf_dir change_to_dir
+
+create_n_go() {
+  mkdir "$1" && cd "$1"
+}
+
+zip_lighter() {
+  DIR="$(pwd)"
+  cd ~/dev/Web/php
+  VERSION="${1:-1.0.0}"
+  zip -vr "plugins/lighterlmsv${VERSION}.zip" lighter-lms \
+    -x "lighter-lms/.DS_Store" \
+       "lighter-lms/.git*" \
+       "lighter-lms/.git/*" \
+       "lighter-lms/assets/svelte/*" \
+       "lighter-lms/node_modules/*" \
+       "*.md" \
+       "*.txt" \
+       "*.log" \
+       "*.swp" \
+       "*.swo"
+  echo "Created plugins/lighterlmsv${VERSION}.zip"
+  cd $DIR
+}

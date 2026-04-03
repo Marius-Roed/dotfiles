@@ -1,0 +1,8 @@
+font-family = "NotoSansM NFM"
+theme = Carbonfox
+font-size = 16
+
+mouse-hide-while-typing = true
+macos-titlebar-style = transparent
+macos-option-as-alt = true
+window-colorspace = "display-p3"
